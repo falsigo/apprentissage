@@ -1,0 +1,26 @@
+X: -1   0   1   2   3   4
+Y: -2   1   4   7   10  13
+Looking at the values of X and Y we are able to derive a relationship that Y=3X + something ... then we notice the value of X at 0 and Y being 1, signifying Y = 3X + 1
+Simmmilarly we'd like our mmodel to narrow down to the similar task
+
+_____________________________________________________________________________________________
+
+We start by importing tensorflow, numpy and keras from tensorflow 
+
+Then we create a simplest neural network with one layer, one neuron and of the input shape just one unit
+
+model = tf.keras.Sequential([keras.layers.Dense(units=1, input_shape=[1])])
+
+Then we need to have two functions that compile this model. These are : optimiser and loss
+the optimiser will produce guesses which will the have a result on the loss function, and based on the previous results of this loss function, the optimizer
+will further rectifiy(or optimise) inorder to get closer to the actual result.
+The model repeats that for the number of 'epochs'
+model.compile(optimizer='sgd', loss='mean_squared_error')
+
+The next thing we need is a dataset for this neuralnet, here we use a set of Xs and Ys and see if the model is able to derive a relationship from it. From the above example.
+
+
+xs = np.array([-1.0, 0.0, 1.0, 2.0, 3.0, 4.0], dtype=float)
+ys = np.array([-2.0, 1.0, 4.0, 7.0, 10.0, 13.0], dtype=float)
+
+There, the first model is done

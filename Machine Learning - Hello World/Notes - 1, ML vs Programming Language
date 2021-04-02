@@ -1,0 +1,25 @@
+You express rules in a programming language. They act on data and your program provides answers
+            ______________
+Rules ---->| Traditional  |
+           |  Programming |------> Answers
+Data  ---->|______________|
+
+
+Instead of trying to define the rules and express them in a programming language, you provide the answers (typically called labels) 
+along with the data, and the machine infers the rules that determine the relationship between the answers and data.
+            ______________
+Answers--->|   Machine    |
+           |  Learning    |------> Rules
+Data  ---->|______________|
+
+
+In traditional programming, your code compiles into a binary that is typically called a program. In ML, the item that you create from the data and labels is called a model.
+
+Consider the result of that to be a model, which is used like this at runtime:
+ 
+            ______________
+           |              |
+Data  ---->|     Model    |------> Predictions
+           |______________|
+           
+You pass the model some data and the model uses the rules that it inferred from the training to make a prediction
